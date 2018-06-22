@@ -1,8 +1,15 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 struct complex
 {
     int r;
     int i;
+};
+struct point
+{
+	double x;
+	double y;
 };
 int rotateArray()
 {
@@ -147,9 +154,28 @@ printf("%f*10^-%d",n,count);
 
 return 0;
 }
+int mostClosestPoint(){
+	struct point p1,p2;
+printf("Enter the point A\n");
+scanf("%lf%lf",&p1.x,&p1.y);
+printf("Enter the point B\n");
+scanf("%lf%lf",&p2.x,&p2.y);
+
+double d2 = sqrt(pow((p2.x-0),2) + pow((p2.y-0),2));
+
+double d1 = sqrt(pow((p1.x-0),2) + pow((p1.y-0),2));
+
+if(d1<d2){
+printf("First point is near to origin\n");
+}
+else
+printf("Second point is near to origin\n");
+
+return 0;
+}
 int main()
 {
-    preciseFloat();
+    mostClosestPoint();
     return 0;
 }
 
